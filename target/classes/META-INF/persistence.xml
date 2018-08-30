@@ -1,0 +1,30 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+             http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+
+    <persistence-unit name = "healthy">
+        <!--   Interface implemented by the persistence provider.
+                 It is invoked by the container in Java EE environments and
+        by the javax.persistence.Persistence class in Java SE environments to
+        create an javax.persistence.EntityManagerFactory.-->
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>examples.Person</class>
+
+        <properties>
+            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+            <property name="hibernate.connection.password" value="1234"/>
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/healthy"/>
+            <property name="hibernate.connection.username" value="root"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
+            <!--<property name="hibernate.hbm2ddl.auto" value="create"/>-->
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <!--https://access.redhat.com/documentation/en-US/JBoss_Enterprise_Application_Platform/6.3/html/Migration_Guide/Preserve_the_Existing_Behavior_of_the_Hibernate_Identity_Auto_Generated_Value1.html-->
+            <!--<property name="hibernate.id.new_generator_mappings" value="false"/>-->
+        </properties>
+
+    </persistence-unit>
+
+</persistence>

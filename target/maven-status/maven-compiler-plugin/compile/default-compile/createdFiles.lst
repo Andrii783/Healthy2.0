@@ -1,0 +1,16 @@
+domain\Service.class
+domain\History.class
+domain\Address.class
+domain\Category.class
+examples\TestPerson.class
+TestMedicine.class
+service\ClientService.class
+domain\City.class
+domain\Client.class
+domain\Gender.class
+domain\Polyclinic.class
+examples\NewGender.class
+domain\Doctor.class
+examples\Person.class
+domain\Profile.class
+domain\Ticket.class
